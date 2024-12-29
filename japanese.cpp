@@ -14,13 +14,16 @@ jute::heap romaji(jute::view txt) {
   constexpr const pair pairs[] {
     { "i",  "い" },
     { "u",  "う" },
+    { "o",  "お" },
     { "ka", "か" },
     { "ki", "き" },
     { "ge", "げ" },
     { "su", "す" },
+    { "ha", "は" },
     { "da", "だ" },
     { "de", "で" },
     { "bu", "ぶ" },
+    { "yo", "よ" },
     { "n",  "ん" },
 
     { "jo", "じょ" },
@@ -68,6 +71,7 @@ jute::heap kanji(jute::view txt) {
 }
 
 int main() try {
+  putln(kanji(*romaji("ohayou")));
   putln(kanji(*romaji("genkidesuka")));
   putln(kanji(*romaji("genkida")));
   putln(kanji(*romaji("daijoubuka")));
