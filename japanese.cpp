@@ -17,14 +17,19 @@ jute::heap romaji(jute::view txt) {
     { "o",  "お" },
     { "ka", "か" },
     { "ki", "き" },
-    { "ge", "げ" },
     { "su", "す" },
     { "ha", "は" },
+    { "ho", "ほ" },
+    { "ma", "ま" },
+    { "ni", "に" },
+    { "yo", "よ" },
+    { "n",  "ん" },
+
+    { "ga", "が" },
+    { "ge", "げ" },
     { "da", "だ" },
     { "de", "で" },
     { "bu", "ぶ" },
-    { "yo", "よ" },
-    { "n",  "ん" },
 
     { "jo", "じょ" },
   };
@@ -48,6 +53,7 @@ jute::heap kanji(jute::view txt) {
   constexpr const pair pairs[] {
     { "げんき",       "元気"   }, 
     { "だいじょうぶ", "大丈夫" },
+    { "にほん",       "日本"   },
   };
 
   jute::heap res {};
@@ -75,6 +81,7 @@ int main() try {
   putln(kanji(*romaji("genkidesuka")));
   putln(kanji(*romaji("genkida")));
   putln(kanji(*romaji("daijoubuka")));
+  putln(kanji(*romaji("nihon")));
 } catch (...) {
   return 1;
 }
