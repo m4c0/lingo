@@ -23,6 +23,7 @@ jute::heap romaji(jute::view txt) {
     { "ha", "は" },
     { "ho", "ほ" },
     { "ma", "ま" },
+    { "na", "な" },
     { "ni", "に" },
     { "yo", "よ" },
     { "n",  "ん" },
@@ -57,7 +58,8 @@ jute::heap kanji(jute::view txt) {
     { "だいじょうぶ", "大丈夫" },
     { "にほん",       "日本"   },
     { "せんせい",     "先生"   },
-    { "がくせい",     "学生"  },
+    { "がくせい",     "学生"   },
+    { "なに",         "何"     },
   };
 
   jute::heap res {};
@@ -88,6 +90,7 @@ int main() try {
   putln(kanji(*romaji("nihon")));
   putln(kanji(*romaji("sensei")));
   putln(kanji(*romaji("gakusei")));
+  putln(kanji(*romaji("nani")));
 } catch (...) {
   return 1;
 }
