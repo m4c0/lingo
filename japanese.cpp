@@ -30,6 +30,7 @@ jute::heap romaji(jute::view txt) {
 
     { "ga", "が" },
     { "ge", "げ" },
+    { "ji", "じ" },
     { "da", "だ" },
     { "de", "で" },
     { "bu", "ぶ" },
@@ -56,6 +57,7 @@ jute::heap kanji(jute::view txt) {
   constexpr const pair pairs[] {
     { "げんき",       "元気"   }, 
     { "だいじょうぶ", "大丈夫" },
+    { "にほんじん",   "日本人" },
     { "にほん",       "日本"   },
     { "せんせい",     "先生"   },
     { "がくせい",     "学生"   },
@@ -83,14 +85,17 @@ jute::heap kanji(jute::view txt) {
 }
 
 int main() try {
-  putln(kanji(*romaji("ohayou")));
-  putln(kanji(*romaji("genkidesuka")));
-  putln(kanji(*romaji("genkida")));
-  putln(kanji(*romaji("daijoubuka")));
-  putln(kanji(*romaji("nihon")));
-  putln(kanji(*romaji("sensei")));
-  putln(kanji(*romaji("gakusei")));
-  putln(kanji(*romaji("nani")));
+  constexpr jute::view words[] {
+    "ohayou",
+    "genkidesuka",
+    "genkida",
+    "daijoubuka",
+    "nihonjin",
+    "sensei",
+    "gakusei",
+    "nani",
+  };
+  for (auto w : words) putln(kanji(*romaji(w)));
 } catch (...) {
   return 1;
 }
