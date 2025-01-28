@@ -12,6 +12,7 @@ jute::heap romaji(jute::view txt) {
   jute::heap res {};
 
   constexpr const pair pairs[] {
+    { "a",  "あ" },
     { "i",  "い" },
     { "u",  "う" },
     { "o",  "お" },
@@ -62,6 +63,7 @@ jute::heap kanji(jute::view txt) {
     { "せんせい",     "先生"   },
     { "がくせい",     "学生"   },
     { "なに",         "何"     },
+    { "あかい",       "赤い"   },
   };
 
   jute::heap res {};
@@ -86,6 +88,7 @@ jute::heap kanji(jute::view txt) {
 
 int main() try {
   constexpr jute::view words[] {
+    "akai",
     "ohayou",
     "genkidesuka",
     "genkida",
