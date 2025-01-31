@@ -21,9 +21,11 @@ jute::heap romaji(jute::view txt) {
     { "ku", "く" },
     { "se", "せ" },
     { "su", "す" },
+    { "chi", "ち" },
     { "ha", "は" },
     { "ho", "ほ" },
     { "ma", "ま" },
+    { "me", "め" },
     { "na", "な" },
     { "ni", "に" },
     { "yo", "よ" },
@@ -64,6 +66,10 @@ jute::heap kanji(jute::view txt) {
     { "がくせい",     "学生"   },
     { "なに",         "何"     },
     { "あかい",       "赤い"   },
+  };
+  constexpr const pair follows[] {
+    { "にち", "日" },
+    { "め",   "目" },
   };
 
   jute::heap res {};
